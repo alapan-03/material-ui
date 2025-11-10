@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "prestart": "node ../../scripts/createFixture.js next-webpack4",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider pnpm next build && concurrently --success first --kill-others \"pnpm next start\" \"node testNextWebpack4Integration\""
+    "start": "node api.js && NODE_OPTIONS=--openssl-legacy-provider pnpm next build && concurrently --success first --kill-others \"pnpm next start\" \"node testNextWebpack4Integration\""
   },
   "dependencies": {
     "@emotion/core": "11.0.0",

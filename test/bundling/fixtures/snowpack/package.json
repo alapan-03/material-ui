@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "prestart": "node ../../scripts/createFixture.js snowpack",
-    "start": "pnpm snowpack build && concurrently --success first --kill-others \"pnpm server\" \"node testSnowpackIntegration\"",
+    "start": "node api.js && pnpm snowpack build && concurrently --success first --kill-others \"pnpm server\" \"node testSnowpackIntegration\"",
     "server": "serve -p 5001 -s build"
   },
   "dependencies": {
